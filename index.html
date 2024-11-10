@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalRate</title>
 </head>
-
 <body>
-
+  <div class="Sidebar">
+    <a href="#">Saved Input</a>
+    <a href="#">Rate Us</a>
+    <a href="#">Share App</a>
+    <a href="#">Exit App</a>
+  </div>
+  <dive class="container">
+    <div class="header">SimpleInterest Calculator</div>
+    <div class="form-container">
+      <label for="principal">Principal Amount</label>
+      <div class="currency-input-group">
+        <select id="currency" class="currency-select">
+          <option value="₦">₦ (Naira)</option>
+                    <option value="$">$ (USD)</option>
+                    <option value="€">€ (Euro)</option>
+                    <option value="£">£ (Pound)</option>
+                </select>
+                <input type="number" id="principal" placeholder="Enter amount">
+                <label for="rate">Interest Rate(%)</label>
+                <input tyep="number" id="rate" placeholder="Enter interest rate">
+                <label>Duration</label>
+                <div style="display: flex; gap: 10px;">
+                  <input type="number" id="days" placeholder="Days">
+                  <input type="number" id="months" placeholder="Months">
+                  <input type="number" id="years" placeholder="Years">
+                </div>
+                <label for="total-interest">Total Interest</label>
+                <input type="text" id="total-interest" readonly>
+                <label for="final-amount">Final Amount</label>
+                <input type="text" id="final-amount" readonly>
+                
+                <button class="btn btn-calculate" onclick="calculateInterest()">Calculate</button>
+                <button class="btn btn-reset" onclick="resetForm()">Reset</button>          
+      </div>
+    </div>
 </body>
-
 </html>
